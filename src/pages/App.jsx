@@ -3,6 +3,7 @@ import Profile from "../components/profile/profile";
 import Switch from "../components/switch/switch";
 import Links from "../components/links/link";
 import SocialLinks from "../components/socialLinks/socialLinks";
+import Footer from "../components/footer/footer";
 
 import "./App.css";
 
@@ -35,6 +36,7 @@ const App = () => {
         <SocialLinks href={"#"} icon={"logo-twitter"} />
 
       </div>
+      <Footer link={"#"}>@najulha</Footer>
     </div>
   );
 
