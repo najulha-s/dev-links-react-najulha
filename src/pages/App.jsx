@@ -12,14 +12,18 @@ import imgLightMode from "../img/pink.webp";
 
 
 const App = () => {
-  const [isLightMode, setIsLightMode] = useState(false);
+  const [isLightMode, setIsLightMode] = useState(true);
+
+const toogleMode= () =>{setIsLightMode((prevMode)=> !prevMode)
+}
 
   const imgSrc = isLightMode ? imgLightMode : imgDarkMode
   const imgAlt = isLightMode ? "Imagem no modo claro" : "Imagem no modo escuro"
   return (
+      <div id="App" className={isLightMode ? "light" : ""}>
     <div id="container">
       <Profile imgSrc={imgSrc} imgAlt={imgAlt}>@najulha</Profile>
-      <Switch></Switch>
+      <Switch mode={toogleMode} infoButton={isLightMode}/>
       <div id="links">
         <ul>
           <Links link={"https://github.com"}>GitHub</Links>
@@ -37,6 +41,7 @@ const App = () => {
 
       </div>
       <Footer link={"#"}>@najulha</Footer>
+    </div>
     </div>
   );
 
